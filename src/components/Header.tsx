@@ -250,7 +250,7 @@ export const Header: React.FC = () => {
               </div>
               <div className="flex items-center gap-4 ml-4">
                 <a
-                  href="https://x.com/thediggerherald"
+                  href="https://x.com/ScoopFinder"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-primary hover:text-accent transition-colors"
