@@ -4,6 +4,7 @@ import { useSupabaseClient } from '../lib/supabaseClient';
 import { User, Trophy, UserCircle, BarChart2, GripHorizontal, X } from 'lucide-react';
 import { MetaAnalyzer } from './MetaAnalyzer';
 import { TikTokModal } from './TikTokModal';
+import { CONTRACT_ADDRESS } from '../constants';
 
 export const Header: React.FC = () => {
   const location = useLocation();
@@ -89,14 +90,14 @@ export const Header: React.FC = () => {
               <div className="w-12 h-12 bg-surface rounded-full p-0.5 border-2 border-primary flex items-center justify-center overflow-hidden">
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <img 
-                    src="https://i.imgur.com/gClqBPj.png"
-                    alt="THE DIGGER HERALD"
+                    src="https://i.imgur.com/eI2mqrS.png"
+                    alt="THE SCOOP FINDER"
                     className="w-full h-full object-contain"
                   />
                 </div>
               </div>
               <h1 className="newspaper-title text-3xl md:text-4xl mb-1 hover:text-accent transition-colors">
-                THE DIGGER HERALD
+                THE SCOOP FINDER
               </h1>
             </div>
           </button>
@@ -179,7 +180,22 @@ export const Header: React.FC = () => {
                   alt="Buy"
                   className="w-5 h-5 object-contain"
                 />
-                $DIGGER
+                $SCOOP
+              </Link>
+              <Link
+                to="/app"
+                className={`flex items-center gap-1.5 font-serif text-base transition-colors ${
+                  location.pathname === '/app'
+                    ? 'text-accent'
+                    : 'hover:text-accent'
+                }`}
+              >
+                <img 
+                  src="https://i.imgur.com/Kw6itOm.png" 
+                  alt="Launchpad"
+                  className="w-5 h-5 object-contain"
+                />
+                Launchpad
               </Link>
               <div className="relative">
                 <button
@@ -233,18 +249,6 @@ export const Header: React.FC = () => {
                 )}
               </div>
               <div className="flex items-center gap-4 ml-4">
-                <a
-                  href="https://t.me/TheDiggerHerald"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-primary hover:text-accent transition-colors"
-                >
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png?20220101141644"
-                    alt="Telegram"
-                    className="w-4 h-4 object-contain"
-                  />
-                </a>
                 <a
                   href="https://x.com/thediggerherald"
                   target="_blank"
@@ -310,7 +314,7 @@ export const Header: React.FC = () => {
 
           <div className="aspect-video">
             <iframe
-              src="https://birdeye.so/tv-widget/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263?chain=solana&viewMode=pair&chartInterval=1D&chartType=CANDLE&chartTimezone=Asia%2FSingapore&chartLeftToolbar=show&theme=dark"
+              src={`https://birdeye.so/tv-widget/${CONTRACT_ADDRESS}?chain=solana&viewMode=pair&chartInterval=1D&chartType=CANDLE&chartTimezone=Asia%2FSingapore&chartLeftToolbar=show&theme=dark`}
               className="w-full h-full"
               frameBorder="0"
               allowFullScreen

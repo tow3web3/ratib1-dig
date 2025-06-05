@@ -20,12 +20,12 @@ export const LandingPage: React.FC = () => {
             <div className="vintage-border p-8">
               <div className="w-32 h-32 mx-auto mb-4 flex items-center justify-center">
                 <img 
-                  src="https://i.imgur.com/gClqBPj.png"
-                  alt="THE DIGGER HERALD"
+                  src="https://i.imgur.com/eI2mqrS.png"
+                  alt="THE SCOOP FINDER"
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              <h1 className="newspaper-title text-6xl md:text-8xl mb-4">THE DIGGER HERALD</h1>
+              <h1 className="newspaper-title text-6xl md:text-8xl mb-4">THE SCOOP FINDER</h1>
               <div className="vintage-divider my-4"></div>
               <p className="text-text-light italic font-body">
                 "All the Token News That's Fit to Launch" - {currentDate}

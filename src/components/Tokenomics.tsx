@@ -18,7 +18,7 @@ export const Tokenomics: React.FC = () => {
               <h1 className="newspaper-title text-4xl md:text-6xl mb-4">TOKENOMICS GAZETTE</h1>
               <div className="vintage-divider my-4"></div>
               <p className="text-text-light italic font-body">
-                "A Financial Edition of THE DIGGER HERALD" - {currentDate}
+                "A Financial Edition of THE SCOOP FINDER" - {currentDate}
               </p>
             </div>
           </div>

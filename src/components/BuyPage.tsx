@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import { CONTRACT_ADDRESS } from '../constants';
 
 export const BuyPage: React.FC = () => {
   return (
@@ -13,10 +14,10 @@ export const BuyPage: React.FC = () => {
               alt="Buy"
               className="w-8 h-8 object-contain"
             />
-            <h1 className="text-3xl font-serif font-bold">Buy $DIGGER</h1>
+            <h1 className="text-3xl font-serif font-bold">Buy $SCOOP</h1>
           </div>
           <p className="text-lg font-body">
-            Welcome to the official $DIGGER token purchase guide. Follow these simple steps to acquire $DIGGER tokens and join our community.
+            Welcome to the official $SCOOP token purchase guide. Follow these simple steps to acquire $SCOOP tokens and join our community.
           </p>
         </div>
 
@@ -93,7 +94,7 @@ export const BuyPage: React.FC = () => {
                 <p className="text-sm font-body">To buy on pump.fun:</p>
                 <ol className="list-decimal pl-5 text-sm font-body space-y-2">
                   <li>Visit pump.fun and connect your Phantom wallet</li>
-                  <li>Search for "DIGGER" in the token search bar</li>
+                  <li>Search for "SCOOP" in the token search bar</li>
                   <li>Enter the amount of SOL you want to spend</li>
                   <li>Click "Buy" and confirm the transaction in your wallet</li>
                 </ol>
@@ -123,7 +124,7 @@ export const BuyPage: React.FC = () => {
                 <p className="text-sm font-body">To buy on Dexscreener:</p>
                 <ol className="list-decimal pl-5 text-sm font-body space-y-2">
                   <li>Visit Dexscreener and connect your Phantom wallet</li>
-                  <li>Search for "DIGGER" or paste the contract address</li>
+                  <li>Search for "SCOOP" or paste the contract address</li>
                   <li>Click on the trading pair you want to use</li>
                   <li>Select "Trade" to be redirected to the DEX</li>
                   <li>Enter the amount and complete the swap</li>
@@ -150,7 +151,7 @@ export const BuyPage: React.FC = () => {
               <div>
                 <h3 className="font-serif font-bold mb-2">Contract Address</h3>
                 <p className="font-mono text-sm break-all p-4 bg-surface-light rounded border border-border/40">
-                  8BtoThi2ZoXnF7QQK1Wjmh2JuBw9FjVvhnGMVZ2vpump
+                  {CONTRACT_ADDRESS}
                 </p>
               </div>
               <div>
@@ -158,11 +159,11 @@ export const BuyPage: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <p className="text-primary/60">Name:</p>
-                    <p className="font-medium">DIGGER</p>
+                    <p className="font-medium">SCOOP</p>
                   </div>
                   <div>
                     <p className="text-primary/60">Symbol:</p>
-                    <p className="font-medium">$DIGGER</p>
+                    <p className="font-medium">$SCOOP</p>
                   </div>
                   <div>
                     <p className="text-primary/60">Network:</p>

@@ -18,7 +18,7 @@ export const LaunchGuide: React.FC = () => {
               <h1 className="newspaper-title text-4xl md:text-6xl mb-4">THE LAUNCH GUIDE</h1>
               <div className="vintage-divider my-4"></div>
               <p className="text-text-light italic font-body">
-                "A Special Edition of THE DIGGER HERALD" - {currentDate}
+                "A Special Edition of THE SCOOP FINDER" - {currentDate}
               </p>
             </div>
           </div>
