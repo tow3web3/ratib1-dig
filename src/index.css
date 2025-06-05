@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1a1a1a;
+  --primary-light: #2a2a2a;
+  --accent: #8B0000;
+  --accent-light: #A52A2A;
+  --background: #F5E6D3;
+  --surface: #FFF9F0;
+  --surface-light: #FFFAF5;
+  --text: #1a1a1a;
+  --text-light: #4a4a4a;
+  --border: #2a1810;
+}
+
+body {
+  font-family: 'Old Standard TT', serif;
+  background-color: var(--background);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply bg-surface rounded-none shadow-md border-2 border-primary;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.02) 0px,
+      rgba(0, 0, 0, 0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  pointer-events: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.newspaper-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 4px double var(--border);
+  text-shadow: 3px 3px 0 var(--surface),
+               4px 4px 0 var(--border);
+}
+
+.button-primary {
+  @apply px-4 py-2 bg-accent text-white font-medium border-2 border-accent
+         hover:bg-accent-light hover:border-accent-light transition-all duration-200
+         focus:outline-none focus:ring-2 focus:ring-accent/20
+         disabled:opacity-50 disabled:cursor-not-allowed
+         active:scale-[0.98];
+  font-family: 'Old Standard TT', serif;
+}
+
+.button-secondary {
+  @apply px-4 py-2 bg-surface text-primary font-medium border-2 border-primary
+         hover:bg-surface-light transition-all duration-200
+         focus:outline-none focus:ring-2 focus:ring-accent/20
+         disabled:opacity-50 disabled:cursor-not-allowed
+         active:scale-[0.98];
+  font-family: 'Old Standard TT', serif;
+}
+
+.input {
+  @apply w-full px-4 py-2 bg-surface text-primary border-2 border-primary
+         focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent
+         placeholder:text-text-light;
+  font-family: 'Old Standard TT', serif;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-left: 2px solid var(--border);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 0;
+}
+
+/* Article styles */
+.article-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.article-meta {
+  font-family: 'Old Standard TT', serif;
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.article-content {
+  font-family: 'Old Standard TT', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  column-count: 1;
+  column-gap: 2rem;
+  column-rule: 1px solid var(--border);
+  text-align: justify;
+  hyphens: auto;
+}
+
+@media (min-width: 768px) {
+  .article-content {
+    column-count: 2;
+  }
+}
+
+/* Status indicators */
+.status-badge {
+  @apply inline-flex items-center px-3 py-1.5 text-xs font-medium border-2;
+  font-family: 'Old Standard TT', serif;
+}
+
+.status-badge-success {
+  @apply border-green-800 text-green-800 bg-green-50;
+}
+
+.status-badge-pending {
+  @apply border-amber-800 text-amber-800 bg-amber-50;
+}
+
+/* Loading states */
+.loading-pulse {
+  @apply animate-pulse bg-surface-light;
+}
+
+/* Vintage decorative elements */
+.vintage-border {
+  border: 2px solid var(--border);
+  position: relative;
+  background-color: var(--surface);
+}
+
+.vintage-border::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
+.vintage-divider {
+  height: 4px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+/* Interactive hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0 var(--border);
+}
+
+.button-primary:hover,
+.button-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+/* Transitions */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ink splatter effect */
+.ink-splatter {
+  position: relative;
+}
+
+.ink-splatter::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='40' fill='%232a1810' fill-opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 50px 50px;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+/* Vintage paper texture */
+.vintage-paper {
+  background-color: var(--surface);
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.05);
+}
+
+/* Vintage typography */
+.vintage-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 4px double var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.vintage-text {
+  font-family: 'Old Standard TT', serif;
+  line-height: 1.8;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Vintage buttons */
+.vintage-button {
+  @apply px-6 py-3 bg-surface text-primary font-medium border-2 border-primary
+         hover:bg-surface-light transition-all duration-200 relative
+         focus:outline-none focus:ring-2 focus:ring-primary/20;
+  font-family: 'Old Standard TT', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.vintage-button::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}

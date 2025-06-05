@@ -1,0 +1,1 @@
+-- This migration has been removed as the social features are no longer needed
