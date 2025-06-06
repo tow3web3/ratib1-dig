@@ -16,12 +16,12 @@ interface TokenLaunchProps {
 }
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
 });
 
 const connection = new Connection(
-  `https://mainnet.helius-rpc.com/?api-key=${process.env.HELIUS_API_KEY}`,
+  `https://mainnet.helius-rpc.com/?api-key=${import.meta.env.VITE_HELIUS_API_KEY}`,
   {
     commitment: "confirmed",
     wsEndpoint: "wss://api.mainnet-beta.solana.com",
