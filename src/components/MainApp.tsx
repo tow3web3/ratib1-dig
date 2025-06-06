@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RedditSearch } from './RedditSearch';
 import { HackerNewsSearch } from './HackerNewsSearch';
 import { LemmySearch } from './LemmySearch';
@@ -22,6 +22,10 @@ export const MainApp: React.FC = () => {
   const [redditSearchTerm, setRedditSearchTerm] = useState('');
   const [hackerNewsSearchTerm, setHackerNewsSearchTerm] = useState('');
   const [lemmySearchTerm, setLemmySearchTerm] = useState('');
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const handleLaunchContent = (content: ContentToLaunch) => {
     setSelectedContent(content);
