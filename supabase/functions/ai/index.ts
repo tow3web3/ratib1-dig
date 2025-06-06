@@ -7,7 +7,7 @@ const corsHeaders = {
 };
 
 // Use environment variable for API key
-const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
+const OPENAI_API_KEY = Deno.env.get("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");
 
 // Add better error handling for missing API key
 if (!OPENAI_API_KEY || !OPENAI_API_KEY.startsWith('sk-')) {
@@ -15,7 +15,7 @@ if (!OPENAI_API_KEY || !OPENAI_API_KEY.startsWith('sk-')) {
 }
 
 const openai = new OpenAI({
-  apiKey: OPENAI_API_KEY
+  apiKey: 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
 });
 
 Deno.serve(async (req) => {
