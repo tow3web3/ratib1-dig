@@ -16,13 +16,12 @@ interface TokenLaunchProps {
 }
 
 const openai = new OpenAI({
-  apiKey:
-    "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",
+  apiKey: process.env.OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
 });
 
 const connection = new Connection(
-  "https://mainnet.helius-rpc.com/?api-key=5d031a52-84a2-45d0-b1d3-013db368e953",
+  `https://mainnet.helius-rpc.com/?api-key=${process.env.HELIUS_API_KEY}`,
   {
     commitment: "confirmed",
     wsEndpoint: "wss://api.mainnet-beta.solana.com",
