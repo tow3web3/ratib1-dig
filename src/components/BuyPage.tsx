@@ -151,7 +151,7 @@ export const BuyPage: React.FC = () => {
               <div>
                 <h3 className="font-serif font-bold mb-2">Contract Address</h3>
                 <p className="font-mono text-sm break-all p-4 bg-surface-light rounded border border-border/40">
-                  {"6qHtAvksH2cSaUjz6euVSikPU8RnDqLpFtuWH6Ropump"}
+                  {"TBA"}
                 </p>
               </div>
               <div>
