@@ -2,8 +2,8 @@
   "scripts": {
     "dev": "concurrently \"vite\" \"node src/server/index.js\"",
     "server": "node src/server/index.js",
-    "build": "tsc && vite build",
-    "vercel-build": "npm run build",
+    "build": "npm install && tsc && vite build",
+    "vercel-build": "npm install && npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
