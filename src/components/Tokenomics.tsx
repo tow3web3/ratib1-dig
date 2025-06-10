@@ -54,6 +54,22 @@ export const Tokenomics: React.FC = () => {
               </div>
             </article>
 
+            {/* Contract Information */}
+            <article className="vintage-paper p-6 mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <img 
+                  src="https://i.ibb.co/DDSjRxyN/icons8-token-64.png"
+                  alt="Contract"
+                  className="w-5 h-5 object-contain"
+                />
+                <h3 className="text-xl font-serif font-bold">Contract Information</h3>
+              </div>
+              <div className="vintage-divider mb-4"></div>
+              <div className="space-y-3 font-body">
+                <p className="font-mono text-sm break-all">CksBYCEHepKAqfzY1DZdJ95ztyuYwGjP7F5DPVn7pump</p>
+              </div>
+            </article>
+
             {/* Distribution Timeline */}
             <div className="vintage-paper p-8 text-center">
               <h3 className="text-xl font-serif font-bold mb-6">Token Distribution Timeline</h3>
