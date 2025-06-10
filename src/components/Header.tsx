@@ -314,7 +314,7 @@ export const Header: React.FC = () => {
 
           <div className="aspect-video">
             <iframe
-              src={`https://birdeye.so/tv-widget/${CONTRACT_ADDRESS}?chain=solana&viewMode=pair&chartInterval=1D&chartType=CANDLE&chartTimezone=Asia%2FSingapore&chartLeftToolbar=show&theme=dark`}
+              src={`https://birdeye.so/tv-widget/${CONTRACT_ADDRESS}?chain=solana&viewMode=pair&chartInterval=1D&chartType=CANDLE&chartTimezone=Asia%2FSingapore&chartLeftToolbar=show&theme=dark&showVolume=true&showMarketCap=true`}
               className="w-full h-full"
               frameBorder="0"
               allowFullScreen
