@@ -3,6 +3,7 @@
     "dev": "concurrently \"vite\" \"node src/server/index.js\"",
     "server": "node src/server/index.js",
     "build": "tsc && vite build",
+    "vercel-build": "npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
