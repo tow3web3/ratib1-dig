@@ -1,1 +1,1 @@
-export const CONTRACT_ADDRESS = 'TBA'; 
+export const CONTRACT_ADDRESS = 'CksBYCEHepKAqfzY1DZdJ95ztyuYwGjP7F5DPVn7pump'; 
